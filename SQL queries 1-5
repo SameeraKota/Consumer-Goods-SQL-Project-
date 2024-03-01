@@ -1,0 +1,71 @@
+
+
+** 1. Provide the list of markets in which customer "Atliq Exclusive" operates its business in the APAC region.
+
+SELECT customer, market, region
+FROM dim_customer  
+WHERE customer = 'Atliq Exclusive' AND region = 'APAC'
+GROUP BY market 
+ORDER BY market;
+
+** 2. What is the percentage of unique product increase in 2021 vs. 2020? The final output contains these fields, unique_products_2020, unique_products_2021, percentage_chg
+
+WITH product_counts AS (
+SELECT 
+fiscal_year,
+COUNT(DISTINCT Product_code) as unique_products 
+FROM fact_gross_price
+group by fiscal_year
+)
+SELECT 
+p1.unique_products as unique_products_2020,
+p2.unique_products as unique_products_2021,
+Round((p2.unique_products - p1.unique_products) *100 / (p1.unique_products),2)  AS percentage_chg
+FROM product_counts p1
+cross join product_counts p2
+WHERE p1.fiscal_year = 2020 AND p2.fiscal_year = 2021;
+
+
+** 3. Provide a report with all the unique product counts for each segment and sort them in descending order of product counts. The final output contains 2 fields, segment and  product_count
+
+SELECT 
+segment, 
+COUNT(DISTINCT product_code) AS product_count
+FROM dim_product
+GROUP BY segment
+ORDER BY product_count DESC;
+
+
+** 4. Follow-up: Which segment had the most increase in unique products in 2021 vs 2020? The final output contains these fields, segment, product_count_2020, product_count_2021,difference
+
+WITH segment_product_counts AS (
+SELECT 
+dp.segment,
+COUNT(DISTINCT CASE WHEN fs.fiscal_year = 2020 THEN fs.product_code END) AS product_count_2020,
+COUNT(DISTINCT CASE WHEN fs.fiscal_year = 2021 THEN fs.product_code END) AS product_count_2021
+FROM dim_product dp
+JOIN fact_sales_monthly fs ON dp.product_code = fs.product_code
+GROUP BY dp.segment
+)
+SELECT 
+segment,
+product_count_2020,
+product_count_2021,
+product_count_2020 - product_count_2021 AS difference
+FROM segment_product_counts;
+
+
+** 5. Get the products that have the highest and lowest manufacturing costs. The final output should contain these fields, product_code, product, manufacturing_cost
+
+SELECT 
+dp.product_code,
+dp.product,
+fm.manufacturing_cost
+FROM dim_product AS dp
+JOIN fact_manufacturing_cost fm ON dp.product_code = fm.product_code
+WHERE 
+    fm.manufacturing_cost = (SELECT MAX(manufacturing_cost) FROM fact_manufacturing_cost) 
+    OR 
+    fm.manufacturing_cost = (SELECT MIN(manufacturing_cost) FROM fact_manufacturing_cost)
+ORDER BY fm.manufacturing_cost DESC;
+
