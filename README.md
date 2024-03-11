@@ -24,7 +24,8 @@ This file provides a comprehensive overview of the tables found in the 'gdb023' 
 
 Tools Used:
 
-SQL: I wrote queries to get information from the database using aggregate functions, subqueries, joining tables, CTEs and window functions.
-Power BI: I used this tool to turn the data into interactive charts and graphs, making it easy to understand.
-PowerPoint: I put together a presentation to share the insights.
+1. SQL: I wrote queries to get information from the database using aggregate functions, subqueries, joining tables, CTEs and window  functions.
+2. Power BI: I used this tool to turn the data into interactive charts and graphs, making it easy to understand.
+3. PowerPoint: I put together a presentation to share the insights.
+
 
