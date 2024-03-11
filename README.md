@@ -21,3 +21,10 @@ This file provides a comprehensive overview of the tables found in the 'gdb023' 
 4. fact_manufacturing_cost: contains the cost incurred in the production of each product
 5. fact_pre_invoice_deductions: contains pre-invoice deductions information for each product
 6. fact_sales_monthly: contains monthly sales data for each product.
+
+Tools Used:
+
+SQL: I wrote queries to get information from the database using aggregate functions, subqueries, joining tables, CTEs and window functions.
+Power BI: I used this tool to turn the data into interactive charts and graphs, making it easy to understand.
+PowerPoint: I put together a presentation to share the insights.
+
