@@ -13,6 +13,7 @@ Their strategic insights and dependable processes have yielded exceptional outco
 
 However, the management noticed that they do not get enough insights to make quick and smart data-informed decisions. They want to expand their data analytics team by adding several junior data analysts. Tony Sharma, their data analytics director wanted to hire someone who is good at both tech and soft skills. Hence, he decided to conduct a SQL challenge which will help him understand both the skills.
 
+## Data 
 This file provides a comprehensive overview of the tables found in the 'gdb023' (atliq_hardware_db) database. It includes information for six main tables:
 
 1. dim_customer: contains customer-related data
@@ -22,13 +23,13 @@ This file provides a comprehensive overview of the tables found in the 'gdb023' 
 5. fact_pre_invoice_deductions: contains pre-invoice deductions information for each product
 6. fact_sales_monthly: contains monthly sales data for each product.
 
-Tools Used:
+## Tools Used:
 
 1. SQL: I wrote queries to get information from the database using aggregate functions, subqueries, joining tables, CTEs and window  functions.
 2. Power BI: I used this tool to turn the data into interactive charts and graphs, making it easy to understand.
 3. PowerPoint: I put together a presentation to share the insights.
 
-Insights: 
+## Insights: 
 
 1. Our unique products experienced a significant 36.33% increase in sales during the fiscal year 2021 compared to the previous year, indicating strong market acceptance and demand.
 2. Notebooks emerged as the top-selling product, while Networking products had comparatively lower sales figures.
