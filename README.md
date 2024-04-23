@@ -7,6 +7,7 @@ Domain:  Consumer Goods | Function: Executive Management
 
 [Video Presentation](https://youtu.be/fR6qunoFERs)
 
+[AD-HOC Insights PDF](https://github.com/SameeraKota/Consumer-Goods-SQL-Project-/blob/main/Consumer%20Goods%20AD-HOC%20Insights.pdf)
 
 
 ## Overview
