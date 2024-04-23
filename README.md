@@ -5,8 +5,11 @@ Codebasic Resume Challenge 4: Provide insights to Management in Consumer Goods D
 
 Domain:  Consumer Goods | Function: Executive Management
 
-Project link: https://codebasics.io/challenge/codebasics-resume-project-challenge
+[Video Presentation](https://youtu.be/fR6qunoFERs)
 
+
+
+## Overview
 Atliq Hardwares (imaginary company) is one of the leading computer hardware producers in India and well expanded in other countries too.
 Founded in 2017, AtliQ emerged as an IT & Business Consulting company dedicated to facilitating the seamless integration of business processes through automated tools.
 Their strategic insights and dependable processes have yielded exceptional outcomes across diverse industries, fostering contented clients, fruitful partnerships, and rapid expansion
